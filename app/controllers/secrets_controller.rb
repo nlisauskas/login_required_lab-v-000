@@ -2,9 +2,7 @@ class SecretsController < ApplicationController
   before_action :require_login
 
   def show
-    if session[:name] == "" || session[:name].nil?
-      redirect_to '/login'
-    end
+    @user = current_user
   end
 
   def require_login
