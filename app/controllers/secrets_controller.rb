@@ -3,9 +3,6 @@ class SecretsController < ApplicationController
 
   def show
     @user = current_user
-    if session[:name] != @user.name
-      redirect_to '/login'
-    end
   end
 
   def require_login
