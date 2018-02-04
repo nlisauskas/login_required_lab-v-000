@@ -18,6 +18,12 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    if session[:name]
+      session.clear
+      redirect_to '/login'
+    else
+      redirect_to '/login'
+    end
   end
 
 end
