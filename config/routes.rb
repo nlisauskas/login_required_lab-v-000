@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
 
-  get '/welcome' to: 'sessions#welcome'
+  get '/welcome' to: 'sessions#index'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   post '/destroy', to: 'sessions#destroy'
