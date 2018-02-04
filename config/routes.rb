@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   post '/destroy', to: 'sessions#destroy'
+  get '/secret', to: 'secrets#show'
+  root 'sessions#index'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
